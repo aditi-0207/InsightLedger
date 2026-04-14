@@ -1,0 +1,161 @@
+.upload-page {
+  min-height: 100vh;
+  padding: 120px 20px;
+  text-align: center;
+  color: white;
+}
+
+/* Card */
+
+.upload-card {
+  max-width: 720px;
+  margin: auto;
+  padding: 60px 50px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 24px;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+/* Title */
+
+.upload-card h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.upload-card p {
+  opacity: 0.75;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+/* Upload Box */
+
+.upload-box {
+  display: block;
+  border: 2px dashed rgba(255,255,255,0.25);
+  border-radius: 18px;
+  padding: 55px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-box:hover {
+  border-color: #60a5fa;
+  background: rgba(96,165,250,0.07);
+}
+
+/* Upload Content */
+
+.upload-icon {
+  font-size: 34px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.upload-content p {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 6px 0;
+}
+
+.upload-content span {
+  font-size: 14px;
+  opacity: 0.65;
+}
+
+/* Selected File */
+
+.file-name {
+  margin-top: 18px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Analyze Button */
+
+.analyze-btn {
+  margin-top: 30px;
+  padding: 14px 38px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  background: linear-gradient(135deg,#3b82f6,#6366f1);
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.analyze-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(99,102,241,0.35);
+}
+
+.analyze-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Top N selector */
+
+.topn-selector {
+  margin-top: 28px;
+  font-size: 15px;
+}
+
+.topn-selector label {
+  margin-right: 10px;
+  opacity: 0.9;
+}
+
+.topn-selector select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: white;
+  color: #111827;
+  font-weight: 500;
+}
+
+/* Results Section */
+
+.results-section {
+  margin-top: 90px;
+}
+
+/* KPI Cards */
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 24px;
+  margin: 40px auto;
+  max-width: 950px;
+}
+
+.kpi-card {
+  background: white;
+  color: #0b1120;
+  padding: 30px;
+  border-radius: 16px;
+  transition: all 0.25s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Chart cards */
+
+.chart-section {
+  max-width: 950px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #1e293b;
+  border-radius: 20px;
+}

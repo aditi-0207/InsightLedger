@@ -1,0 +1,278 @@
+/* ================= GLOBAL FIX ================= */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Shared container used everywhere */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+
+/* ================= HERO WRAPPER ================= */
+
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #0b1220;
+  overflow: hidden;
+}
+
+.hero-wrapper::before {
+  content: "";
+  position: absolute;
+
+  top: -140px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 900px;
+  height: 420px;
+
+  background: radial-gradient(
+    circle,
+    rgba(59,130,246,0.25),
+    transparent 70%
+  );
+
+  filter: blur(120px);
+  z-index: 0;
+}
+
+
+/* ================= GRID BACKGROUND ================= */
+
+.hero-grid-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 49%,
+      rgba(200,200,200,0.08) 49%,
+      rgba(200,200,200,0.08) 51%,
+      transparent 51%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 49%,
+      rgba(200,200,200,0.08) 49%,
+      rgba(200,200,200,0.08) 51%,
+      transparent 51%
+    );
+
+  background-size: 42px 42px;
+
+  -webkit-mask-image:
+    radial-gradient(ellipse 65% 65% at 50% 50%, #000 35%, transparent 75%);
+  mask-image:
+    radial-gradient(ellipse 65% 65% at 50% 50%, #000 35%, transparent 75%);
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  backdrop-filter: blur(10px);
+  background: rgba(10,20,45,0.7);
+}
+
+.navbar-inner {
+  width: 100%;
+  max-width: 1200px;
+
+  padding: 18px 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 42px;
+  width: auto;
+}
+
+.brand-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* CTA */
+
+.nav-cta {
+  background: white;
+  color: #030f30 !important;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+/* ================= HERO CONTENT ================= */
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 80px 24px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-left h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-top: 20px;
+}
+
+.hero-left h1 span {
+  color: #60a5fa;
+}
+
+.hero-left p {
+  margin-top: 20px;
+  line-height: 1.7;
+  color: #94a3b8;
+  max-width: 520px;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  border: 1px solid #334155;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #e2e8f0;
+}
+
+.secondary-btn:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+
+/* ================= IMAGE ================= */
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-stack {
+  width: 100%;
+  max-width: 620px;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  box-shadow: 0 50px 120px rgba(0,0,0,0.6);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding-top: 60px;
+  }
+
+  .hero-left h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .image-stack {
+    max-width: 480px;
+  }
+}
