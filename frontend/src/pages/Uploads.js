@@ -11,7 +11,6 @@ import {
   BarChart,
   Bar,
   ResponsiveContainer,
-  Legend,
 } from "recharts";
 
 function Upload() {
